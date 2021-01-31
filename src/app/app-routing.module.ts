@@ -15,7 +15,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/pratical/pratical.module').then(m => m.PraticalModule)
   },
   {
-    path: 'pricing', 
+    path: 'subscription', 
     loadChildren: () => import('./pages/pricing/pricing.module').then(m => m.PricingModule)
   },
   {
@@ -27,6 +27,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule)
   },
 
+  { path: '**', pathMatch: 'full', redirectTo: 'page-not-found' },
   { path: '**', component: Page404Component }
 
 ];
